@@ -10,8 +10,12 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   login = {
-    email: '',
+    grant_type: 'password',
+    client_id: 1,
+    client_secret: 'NFW5FcrYojn8fJTMinqYGdlb9kwiJe6R6Ialgthk',
+    username: '',
     password: ''
+
   };
 
   constructor(private account_service : AccountService,
@@ -22,7 +26,8 @@ export class LoginComponent implements OnInit {
 
   async onSubmit(){
     try{
-      const resut = await this.account_service.login(this.login);
+      const result = await this.account_service.login(this.login);
+      console.log(`${result}`);
       this.router.navigate(['']);
     } catch (error) {
       console.error(error);
