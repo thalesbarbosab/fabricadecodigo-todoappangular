@@ -1,6 +1,6 @@
 # ToDoApp
 
-Este repositório representa o cusro ministrado no canal do youtube fabricadecodigo para desenvolvimento em angular de um app ToDo com implementação de autenticação oauth
+Este repositório representa o curso ministrado no canal do youtube fabricadecodigo para desenvolvimento em angular de um app ToDo com implementação de autenticação oauth
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.18.
 
