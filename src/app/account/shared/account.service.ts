@@ -32,4 +32,8 @@ export class AccountService {
     const result = await this.http.post<any>(`${environment.api}/api/users`,account,{headers: http_headers}).toPromise();
     return result;
   }
+  getAuthorizationToken(){
+    const token = window.localStorage.getItem('token');
+    return token;
+  }
 }
