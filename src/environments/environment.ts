@@ -4,7 +4,10 @@
 
 export const environment = {
   production: false,
-  api: 'http://laravelpassport.homestead'
+  api: 'http://laravelpassport.homestead',
+  client_id : 1,
+  client_secret: 'yr6wI3ciPySJqlJXYe5p79HtSa8GmhPvm4s62mVQ',
+  grant_type: 'password',
 };
 
 /*
