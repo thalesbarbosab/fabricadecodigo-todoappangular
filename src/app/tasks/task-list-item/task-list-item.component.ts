@@ -13,14 +13,14 @@ export class TaskListItemComponent implements OnInit {
 
   @Output()
   onDeleteTask = new EventEmitter()
-  
+
   constructor(private taskService: TaskService) { }
 
   ngOnInit() {
   }
 
   remove(task: Task) {
-    this.taskService.delete(task._id).subscribe(() => {
+    this.taskService.delete(task.id).subscribe(() => {
       this.onDeleteTask.emit(task);
     });
   }

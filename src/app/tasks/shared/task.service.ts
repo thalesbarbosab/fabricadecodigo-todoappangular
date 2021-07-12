@@ -7,15 +7,15 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class TaskService {
-  
+
   constructor(private http: HttpClient) { }
 
   getAll() {
-    return this.http.get<Task[]>(`${environment.api}/tasks`);
+    return this.http.get<Task[]>(`${environment.api}/api/tasks`);
   }
 
   getById(id: string) {
-    return this.http.get<Task>(`${environment.api}/tasks/${id}`);
+    return this.http.get<Task>(`${environment.api}/api/tasks/${id}`);
   }
 
   save(task: Task) {
@@ -24,14 +24,14 @@ export class TaskService {
       completed: task.completed
     };
 
-    if (task._id) {
-      return this.http.put<Task>(`${environment.api}/tasks/${task._id}`, taskBody);
+    if (task.id) {
+      return this.http.put<Task>(`${environment.api}/api/tasks/${task.id}`, taskBody);
     } else {
-      return this.http.post<Task>(`${environment.api}/tasks`, taskBody);
+      return this.http.post<Task>(`${environment.api}/api/tasks`, taskBody);
     }
   }
 
   delete(id: string) {
-    return this.http.delete(`${environment.api}/tasks/${id}`);
+    return this.http.delete(`${environment.api}/api/tasks/${id}`);
   }
 }
